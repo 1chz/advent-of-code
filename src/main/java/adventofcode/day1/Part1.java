@@ -1,22 +1,8 @@
 package adventofcode.day1;
 
 import java.io.CharArrayWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class Part1 {
-  public static void main(String[] args) {
-    Part1 part1 = new Part1();
-
-    try (var file = Files.lines(Path.of("src/main/resources/day1/input.txt"))) {
-      System.out.println(file.mapToInt(part1::solve).sum());
-
-    } catch (IOException e) {
-      System.out.println(e.getMessage());
-    }
-  }
-
   public int solve(String input) {
     Character first = null;
     Character last = null;
